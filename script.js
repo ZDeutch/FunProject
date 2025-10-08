@@ -46,7 +46,11 @@ class Timer {
         this.startTime = 0;
         this.elapsedTime = 0;
         this.isRunning = false;
-        this.updateDisplay();
+        
+        // Force display to show 00.000
+        this.secondsDisplay.textContent = '00';
+        this.millisecondsDisplay.textContent = '000';
+        
         this.updateButtons();
         this.timerCard.classList.remove('running');
     }
